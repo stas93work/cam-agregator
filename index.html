@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Мои модели</h1>
+    <div id="models-list"></div>
+    <script>
+        fetch('models.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('models-list').innerText = JSON.stringify(data);
+            });
+    </script>
+</body>
+</html>
